@@ -1,10 +1,10 @@
 var request = require("request");
 
 var syncUrl = "https://parsimotion-syncer.azurewebsites.net/api/hooks/webjob";
-syncUrl = "http://localhost:9000/api/hooks/webjob";
+
 var token = "*****";
 
-var userId = "*****";
+var userId = "document_id";
 
 var options = {
     url: syncUrl,
@@ -14,10 +14,6 @@ var options = {
 };
 
 request.post(options, function(err, result) {
-	if (err)
-		console.error(new Date() + ": Failed...\n" + err);
-	else {
-		result = result.body;
-		console.log(new Date() + ": OK (fulfilled: %d, failed: %d, unlinked: %d)", result.fulfilled.length, result.failed.length, result.failed.length);
-	}
+	console.log(err);
+	console.log(result);
 });
