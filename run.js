@@ -9,11 +9,11 @@ var userId = "document_id";
 var options = {
     url: syncUrl,
     headers: { signature: token },
-	body: { userId: userId },
-	json: true
+    body: { userId: userId },
+    json: true
 };
 
 request.post(options, function(err, result) {
-	console.log(err);
-	console.log(result);
+    console.log(err);
+    console.log(result);
 });
