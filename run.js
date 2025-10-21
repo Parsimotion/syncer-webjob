@@ -2,7 +2,7 @@ var request = require("request");
 
 var syncUrl = "https://parsimotion-syncer.azurewebsites.net/api/hooks/webjob";
 
-var token = "*****";
+var token = "NO_HARDCODED_SECRET_HERE";
 
 var userId = "document_id";
 
